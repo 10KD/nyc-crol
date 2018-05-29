@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 import { Profile } from 'src/types/profile';
+import { environment } from '../../environments/environment'
 
 @Component({
   selector: 'app-create-profile',
