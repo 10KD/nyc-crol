@@ -1,0 +1,10 @@
+<!-- <ul *ngIf="users"> -->
+<ul class="users-list">
+  <li>
+    <a routerLink="/users/new">Create User</a>
+  </li>
+  <br>
+  <li *ngFor="let user of users">
+    <a routerLink="/users/{{user.id}}">{{user.userName}}</a>
+  </li>
+</ul>

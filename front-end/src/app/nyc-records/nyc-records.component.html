@@ -1,0 +1,8 @@
+<!-- <ul *ngIf="records"> -->
+<ul class="categories">
+  <li *ngFor="let record of records">
+    <a routerLink="/records/{{record.id}}">{{record.categoryName}}</a>
+    <br>
+    <br>
+  </li>
+</ul>

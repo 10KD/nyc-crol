@@ -1,0 +1,10 @@
+.record {
+    margin: 30px;
+    padding: 20px;
+    border: 1px dashed;
+    /* font-family: 'Roboto', sans-serif; */
+}
+.record p {
+    margin: 5px;
+    
+}

@@ -1,0 +1,5 @@
+<ul *ngIf="profiles">
+  <li *ngFor="let profile of profiles">
+    <a routerLink="/profiles/{{profile.id}}">{{profile.profileName}}</a>
+  </li>
+</ul>

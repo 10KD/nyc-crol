@@ -1,0 +1,18 @@
+<h3>
+  Create a new User.
+</h3>
+<section>
+  Username:
+  <input [(ngModel)]="userName" type="text" placeholder="Username Here" />
+</section>
+<section>
+  First Name:
+  <input [(ngModel)]="firstName" type="text" placeholder="First Name Here" />
+</section>
+<section>
+  Last Name:
+  <input [(ngModel)]="lastName" type="text" placeholder="Last Name Here" />
+</section>
+<a routerLink="/">
+  <input (click)="createUser(userName, firstName, lastName)" type="submit" />
+</a>

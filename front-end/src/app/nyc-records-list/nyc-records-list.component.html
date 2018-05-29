@@ -1,0 +1,9 @@
+<ul *ngIf="parsedRecords">
+    <h3>{{recordCategory.categoryName}} Promotions List</h3>
+  <li class="record" *ngFor="let parsedRecord of parsedRecords">
+    <!-- <a routerLink="/recordsList/{{record.id}}">record</a> -->
+    <p *ngFor="let line of parsedRecord">
+      {{line}}
+    </p>
+  </li>
+</ul>

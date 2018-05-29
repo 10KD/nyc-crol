@@ -1,0 +1,17 @@
+<section *ngIf="user">
+
+  <h3>
+    Edit user: {{user.userName}}
+  </h3>
+  <section>
+    Frist Name:
+    <input [(ngModel)]="firstName" type="text" placeholder="First Name Here" />
+  </section>
+  <section>
+    Last Name:
+    <input [(ngModel)]="lastName" type="text" placeholder="Last Name Here" />
+  </section>
+  <a routerLink="/">
+    <input (click)="updateUser(user.userName, firstName, lastName)" type="submit" />
+  </a>
+</section>

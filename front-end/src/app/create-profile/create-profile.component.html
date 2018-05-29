@@ -1,0 +1,14 @@
+<h3>
+  Create a new profile.
+</h3>
+<section>
+  Profile Name: 
+  <input [(ngModel)]="profileName" type="text" placeholder="Profile Name Here"/>
+</section>
+<section>
+  Bio: 
+  <input [(ngModel)]="bio" type="text" placeholder="Bio Here"/>
+</section>
+<a routerLink="/">
+  <input (click)="createProfile(profileName, bio)" type="submit" />
+</a>

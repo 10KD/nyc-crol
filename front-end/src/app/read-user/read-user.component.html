@@ -1,0 +1,14 @@
+<!-- <section > -->
+<section *ngIf="user">
+  <dl>
+    <dd>User Name: {{user.userName}}</dd>
+    <dd>First Name: {{user.firstName}}</dd>
+    <dd>Last Name: {{user.lastName}}</dd>
+  </dl>
+  <a routerLink="/users/edit/{{user.id}}">
+    <button type="edit">Edit</button>
+  </a>
+  <a routerLink="/">
+    <button type="delete" (click)="deleteUser(user.id)">Delete</button>
+  </a>
+</section>
