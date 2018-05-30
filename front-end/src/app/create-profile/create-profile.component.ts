@@ -17,7 +17,7 @@ export class CreateProfileComponent implements OnInit {
 
   createProfile(profileName, bio) {
     this.http.post(
-      '/api/profiles',
+      '${apiHost}/api/profiles',
       {
         "profileName": profileName,
         "bio": bio

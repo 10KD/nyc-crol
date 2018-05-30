@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { USERS } from '../users';
-// import { UsersService } from '../users.service';
+import { UsersService } from '../users.service';
+import { Http } from '@angular/http';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-list-users',
@@ -9,15 +11,16 @@ import { USERS } from '../users';
 })
 export class ListUsersComponent implements OnInit {
 
-  users = USERS;
+  users: any;
 
-  // constructor(private usersService: UsersService) { }
-  constructor() { }
+  constructor(private usersService: UsersService, private http: Http) { }
+  // constructor() { }
 
   ngOnInit() {
-    console.log(this.users);
-    
-    // this.usersService.getUsersList(this.users)
+    this.http.get(`${environment.apiHost}/api/users`)
+      .toPromise()
+      .then(response => this.users = response.json());
+    // this.usersService.getUsersList(this.users.bind(this));
   }
 
 }

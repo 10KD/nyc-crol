@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HttpModule } from '@angular/http';
+import { HttpModule, Http } from '@angular/http';
 import { AppComponent } from './app.component';
 import { ListProfilesComponent } from './list-profiles/list-profiles.component';
 import { ReadProfileComponent } from './read-profile/read-profile.component';
@@ -14,6 +14,8 @@ import { ReadUserComponent } from './read-user/read-user.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
 import { NycRecordsComponent } from './nyc-records/nyc-records.component';
 import { NycRecordsListComponent } from './nyc-records-list/nyc-records-list.component';
+import { UsersService } from './users.service';
+import { HttpClient, HttpHandler, HttpClientModule } from '@angular/common/http';
 
 
 const routes: Routes = [
@@ -82,12 +84,13 @@ const routes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
+    HttpClientModule,
     RouterModule.forRoot(routes)
   ],
   exports: [
     RouterModule
   ],
-  providers: [],
+  providers: [UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

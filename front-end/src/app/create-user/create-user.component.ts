@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 import { User } from 'src/app/types/user';
-// import { UsersService } from '../users.service';
+import { UsersService } from '../users.service';
 
 @Component({
   selector: 'app-create-user',
@@ -15,11 +15,11 @@ export class CreateUserComponent implements OnInit {
   lastName: String;
   // user: User;
 
-  // constructor(private usersService: UsersService) { }
-  constructor() { }
+  constructor(private usersService: UsersService) { }
+  // constructor() { }
 
   createUser(userName, firstName, lastName) {
-    // this.usersService.createUser(userName, firstName, lastName);
+    this.usersService.createUser(userName, firstName, lastName);
   }
 
   ngOnInit() {
