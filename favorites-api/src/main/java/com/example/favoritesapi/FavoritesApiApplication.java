@@ -11,11 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class FavoritesApiApplication {
 
-	@RequestMapping("/")
-	public String home() {
-		return "some favorites";
-	}
-
 	public static void main(String[] args) {
 		SpringApplication.run(FavoritesApiApplication.class, args);
 	}

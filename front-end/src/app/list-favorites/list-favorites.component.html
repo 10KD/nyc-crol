@@ -1,0 +1,7 @@
+<div *ngIf="favorites">
+  <div class="favorites-list list-group">
+    <a *ngFor="let favorite of favorites" class="list-group-item">
+      {{favorite.favoriteInfo}}
+    </a>
+  </div>
+</div>
