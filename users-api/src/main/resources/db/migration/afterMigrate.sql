@@ -1,7 +1,7 @@
 INSERT INTO USERS
   (USER_NAME, FIRST_NAME, LAST_NAME)
 VALUES
-  ('user from seeds', 'Ima', 'User'),
-  ('another user', 'Ura', 'User'),
-  ('someone', 'Heeza', 'User'),
-  ('else', 'Sheeza', 'User');
+  ('Lebron James', 'Clevland', 'Cavs'),
+  ('Steph Curry', 'Golden State', 'Warriors'),
+  ('James Harden', 'Houston', 'Rockets'),
+  ('Jayson Tatum', 'Boston', 'Celtics');

@@ -1,7 +1,13 @@
-<div *ngIf="favorites">
-  <div class="favorites-list list-group">
-    <a *ngFor="let favorite of favorites" class="list-group-item">
-      {{favorite.favoriteInfo}}
-    </a>
+<ul *ngIf="favorites" class="list-group">
+  <div *ngFor="let favorite of favorites" class="oneFavorite">
+    <p class="list-group-item title" [ngClass]="{'list-group-item-info' : favorite.categoryId == '2', 'list-group-item-danger' :
+      favorite.categoryId == '1', 'list-group-item-success' : favorite.categoryId == '3'}">
+      {{records[favorite.categoryId - 1].categoryName}} Promotion
+    </p>
+    <div class="list-group-item record">
+      <p *ngFor="let parsedLine of parse(favorite.favoriteInfo)">
+        {{parsedLine}}
+      </p>
+    </div>
   </div>
-</div>
+</ul>

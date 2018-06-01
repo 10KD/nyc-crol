@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Http } from "@angular/http";
 import { environment } from "../../environments/environment";
+import { RECORDS } from "../records";
 
 @Component({
   selector: "app-list-favorites",
@@ -9,8 +10,14 @@ import { environment } from "../../environments/environment";
 })
 export class ListFavoritesComponent implements OnInit {
   favorites: any;
+  records = RECORDS;
 
   constructor(private http: Http) {}
+
+  parse(record) {
+    let splitDescription = record.split(";");
+    return splitDescription;
+  }
 
   ngOnInit() {
     this.http

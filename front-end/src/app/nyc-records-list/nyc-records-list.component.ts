@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { Http } from "@angular/http";
 import { RECORDS } from "../records";
 import { ActivatedRoute } from "@angular/router";
+import { environment } from "../../environments/environment";
 
 @Component({
   selector: "app-nyc-records-list",
@@ -19,8 +20,17 @@ export class NycRecordsListComponent implements OnInit {
     return splitDescription;
   }
 
-  favorite(record) {
-    console.log(record + " -- has been favorited");
+  createFavorite(favoriteInfo, categoryId, userId) {
+    this.http
+      .post(`${environment.apiHost}/api/favorites`, {
+        favoriteInfo: favoriteInfo,
+        categoryId: categoryId,
+        userId: userId
+      })
+      .toPromise()
+      .then(response =>
+        console.log(response.json().favoriteInfo + " -- has been favorited")
+      );
   }
 
   ngOnInit() {
@@ -29,7 +39,6 @@ export class NycRecordsListComponent implements OnInit {
         this.recordCategory = RECORDS[param.id - 1];
       }
       this.recordCategoryNum = param.id;
-
     });
     this.http
       .get(this.recordCategory.url)
