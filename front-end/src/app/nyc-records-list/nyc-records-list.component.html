@@ -4,9 +4,15 @@
   'list-group-item-success' : recordCategoryNum == 3}">
     {{recordCategory.categoryName}} Promotions List
   </li>
-  <a routerLink="/records/{{recordCategoryNum}}"  *ngFor="let record of recordsList" class="record list-group-item" (click)="createFavorite(record.additional_description_1, recordCategoryNum, 1)">
+  <li *ngFor="let record of recordsList" class="record list-group-item" >
+    <label class="custom-checkbox pull-right" >
+      <input type="checkbox" (click)="inDb(record.additional_description_1) ? deleteFavorite(recordToDelete) : createFavorite(record.additional_description_1, recordCategoryNum, 1)"/>
+      <i class="glyphicon glyphicon-star-empty"></i>
+      <i class="glyphicon glyphicon-star"></i>
+      <span>Favorite</span>
+    </label>
     <p *ngFor="let parsedLine of parse(record)">
       {{parsedLine}}
     </p>
-  </a>
+  </li>
 </ul>

@@ -1,3 +1,8 @@
+<div class="container">
+  <h3>
+    Steph Curry's Favorites
+  </h3>
+</div>
 <ul *ngIf="favorites" class="list-group">
   <div *ngFor="let favorite of favorites" class="oneFavorite">
     <p class="list-group-item title" [ngClass]="{'list-group-item-info' : favorite.categoryId == '2', 'list-group-item-danger' :
@@ -5,6 +10,12 @@
       {{records[favorite.categoryId - 1].categoryName}} Promotion
     </p>
     <div class="list-group-item record">
+      <label class="custom-checkbox pull-right">
+        <input type="checkbox" (click)="deleteFavorite(favorite)"/>
+          <i class="glyphicon glyphicon-star-empty"></i>
+          <i class="glyphicon glyphicon-star"></i>
+          <span>Favorite</span>
+      </label>
       <p *ngFor="let parsedLine of parse(favorite.favoriteInfo)">
         {{parsedLine}}
       </p>

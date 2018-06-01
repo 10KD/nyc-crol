@@ -13,6 +13,34 @@ export class ListFavoritesComponent implements OnInit {
   records = RECORDS;
 
   constructor(private http: Http) {}
+  deleteFromFavorites(fav) {
+    console.log(fav);
+
+    for (let index = 0; index < this.favorites.length; index++) {
+      const favorite = this.favorites[index];
+
+      if (fav == favorite) {
+        this.favorites.splice(index, 1);
+        console.log(
+          "favorite: " + favorite.id + " has been deleted from frontend"
+        );
+        console.log(this.favorites);
+      }
+    }
+  }
+
+  deleteFavorite(record) {
+    console.log(record);
+    this.http
+      .delete(`${environment.apiHost}/api/favorites/` + record.id)
+      .toPromise()
+      .then(response => {
+        console.log(
+          "favorite: " + record.id + " has been deleted from backend"
+        );
+        this.deleteFromFavorites(record);
+      });
+  }
 
   parse(record) {
     let splitDescription = record.split(";");

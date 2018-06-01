@@ -1,15 +1,56 @@
 .record {
- 
-    padding: 10px;
-  
-    /* font-family: 'Roboto', sans-serif; */
+  padding: 10px;
 }
 .record p {
-    margin: 5px;
-    
+  margin: 5px;
 }
 
 .title {
-    font-size: 16px;
-    font-weight: bold;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+label {
+  /* Presentation */
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/* Required Styling */
+
+label input[type="checkbox"] {
+  display: none;
+}
+
+.custom-checkbox {
+  margin-left: 2em;
+  position: relative;
+  cursor: pointer;
+  padding-right: 4px;
+}
+
+.custom-checkbox .glyphicon {
+  color: gold;
+  position: absolute;
+  /* top: 0.4em; */
+  left: -1.25em;
+  font-size: 1.2em;
+}
+
+.custom-checkbox .glyphicon-star-empty {
+  color: gray;
+}
+
+.custom-checkbox .glyphicon-star {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.custom-checkbox:hover .glyphicon-star{
+  opacity: 0.5;
+}
+
+.custom-checkbox input[type="checkbox"]:checked ~ .glyphicon-star {
+  opacity: 1;
 }

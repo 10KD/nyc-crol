@@ -17,6 +17,7 @@ import { NycRecordsListComponent } from './nyc-records-list/nyc-records-list.com
 import { UsersService } from './users.service';
 import { HttpClient, HttpHandler, HttpClientModule } from '@angular/common/http';
 import { ListFavoritesComponent } from './list-favorites/list-favorites.component';
+import { HomeComponent } from './home/home.component';
 
 
 const routes: Routes = [
@@ -67,6 +68,10 @@ const routes: Routes = [
     path: 'favorites',
     component: ListFavoritesComponent
   },
+  {
+    path: '',
+    component: HomeComponent
+  },
 
 
 ];
@@ -84,7 +89,8 @@ const routes: Routes = [
     UpdateUserComponent,
     NycRecordsComponent,
     NycRecordsListComponent,
-    ListFavoritesComponent
+    ListFavoritesComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
