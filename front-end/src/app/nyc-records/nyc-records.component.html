@@ -1,8 +1,12 @@
 <!-- <ul *ngIf="records"> -->
-<ul class="categories">
-  <li *ngFor="let record of records">
-    <a routerLink="/records/{{record.id}}">{{record.categoryName}}</a>
-    <br>
-    <br>
-  </li>
+<ul class="categories list-group">
+  <a class="list-group-item fire" routerLink="/records/1">
+    Fire Department 
+  </a>
+  <a class="list-group-item police" routerLink="/records/2">
+    Police Department 
+  </a>
+  <a class="list-group-item sanitation" routerLink="/records/3">
+    Sanitation Department 
+  </a>
 </ul>

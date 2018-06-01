@@ -41,5 +41,5 @@ export class UpdateUserComponent implements OnInit {
         this.user = response.json();
         console.log(this.user);
       }); 
-
+  }
 }

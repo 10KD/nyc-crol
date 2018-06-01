@@ -1,3 +1,21 @@
-.categories a{
-    text-decoration: none;
+.categories a {
+  text-decoration: none;
+}
+
+a {
+  font-weight: bold;
+}
+.fire:hover {
+  color: #a94442;
+  background-color: #f2dede;
+}
+
+.police:hover {
+  color: #31708f;
+  background-color: #d9edf7;
+}
+
+.sanitation:hover {
+  color: #3c763d;
+  background-color: #dff0d8;
 }

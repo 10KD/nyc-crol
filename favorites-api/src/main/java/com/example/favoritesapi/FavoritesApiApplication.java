@@ -1,4 +1,4 @@
-package com.example.usersapi;
+package com.example.favoritesapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,9 +9,14 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @EnableEurekaClient
 @RestController
-public class UsersApiApplication {
+public class FavoritesApiApplication {
+
+	@RequestMapping("/")
+	public String home() {
+		return "some favorites";
+	}
 
 	public static void main(String[] args) {
-		SpringApplication.run(UsersApiApplication.class, args);
+		SpringApplication.run(FavoritesApiApplication.class, args);
 	}
 }

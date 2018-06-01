@@ -1,10 +1,15 @@
 .record {
-    margin: 30px;
-    padding: 20px;
-    border: 1px dashed;
+ 
+    padding: 10px;
+  
     /* font-family: 'Roboto', sans-serif; */
 }
 .record p {
     margin: 5px;
     
+}
+
+.title {
+    font-size: 16px;
+    font-weight: bold;
 }

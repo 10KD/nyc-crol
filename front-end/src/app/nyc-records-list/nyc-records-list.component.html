@@ -1,6 +1,10 @@
-<ul *ngIf="parsedRecords">
-    <h3>{{recordCategory.categoryName}} Promotions List</h3>
-  <li class="record" *ngFor="let parsedRecord of parsedRecords">
+<ul *ngIf="parsedRecords" class="list-group">
+  <li class="list-group-item title" [ngClass]="{'list-group-item-info' : recordCategoryNum == 2, 
+  'list-group-item-danger' : recordCategoryNum == 1, 
+  'list-group-item-success' : recordCategoryNum == 3}">
+    {{recordCategory.categoryName}} Promotions List
+  </li>
+  <li *ngFor="let parsedRecord of parsedRecords" class="record list-group-item" (click)="favorite(parsedRecord)">
     <!-- <a routerLink="/recordsList/{{record.id}}">record</a> -->
     <p *ngFor="let line of parsedRecord">
       {{line}}

@@ -1,12 +1,14 @@
 <section *ngIf="profile">
-  <dl>
-    <dd>Profile Name: {{profile.profileName}}</dd>
-    <dd>Bio: {{profile.bio}}</dd>
-  </dl>
-  <a routerLink="/profiles/edit/{{profile.id}}">
-    <button type="edit">Edit</button>
-  </a>
-  <a routerLink="/">
-    <button type="delete" (click)="deleteProfile(profile.id)">Delete</button>
-  </a>
+  <div class="container">
+    <dl>
+      <dd>Profile Name: {{profile.profileName}}</dd>
+      <dd>Bio: {{profile.bio}}</dd>
+    </dl>
+    <a routerLink="/profiles/edit/{{profile.id}}">
+      <button type="edit">Edit</button>
+    </a>
+    <a routerLink="/">
+      <button type="delete" (click)="deleteProfile(profile.id)">Delete</button>
+    </a>
+  </div>
 </section>
