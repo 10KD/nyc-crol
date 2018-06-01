@@ -30,7 +30,10 @@ export class NycRecordsListComponent implements OnInit {
       .toPromise()
       .then(response =>
         console.log(response.json().favoriteInfo + " -- has been favorited")
-      );
+      )
+      .catch(err => {
+        console.log(err.message);
+      });
   }
 
   ngOnInit() {
