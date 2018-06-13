@@ -6,15 +6,15 @@
 Find the 10 most recent promotions recrods for NYC's fire, police, and sanitation departments.
 Create Read Update and Delete Users. Create Read and Delete Favorites. 
 
-### Architecture 
+## Architecture 
 
 5 microservices that are dockerized
 
-## Eureka Server Registry
-## Zuul Api Gateway
-## Users Api
-## Favorites Api
-## Angular Frontend
+### Eureka Server Registry
+### Zuul Api Gateway
+### Users Api
+### Favorites Api
+### Angular Frontend
 
 
 
