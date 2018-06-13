@@ -1,8 +1,25 @@
 # Overview
 
-### New York City Search Engine
+<!-- ### New York City Search Engine -->
+### New York City Employee Promotions Finder
 
-The City of New York has a data API they would like to add a front-end to. `The API`
+Find the 10 most recent promotions recrods for NYC's fire, police, and sanitation departments.
+Create Read Update and Delete Users. Create Read and Delete Favorites. 
+
+### Architecture 
+
+5 microservices that are dockerized
+
+## Eureka Server Registry
+## Zuul Api Gateway
+## Users Api
+## Favorites Api
+## Angular Frontend
+
+
+
+
+<!-- The City of New York has a data API they would like to add a front-end to. `The API`
 handles the ability to search for keywords or limit results you will be making
 requests to this `API` and displaying it's results. On top of a front-end, the City
 would also like the ability to save and manage User information (without any need for authentication).
@@ -36,11 +53,11 @@ Your proposal must include (using this template):
 - Wireframes that demonstrate what the solution will look like
 - How the microservices solution will solve the companies problem
 - Defend your decision to build microservices rather than a monolith.
-- Include an external case study that demonstrates a similar problem/solution
+- Include an external case study that demonstrates a similar problem/solution -->
 
 
 <!-- ****proposal***** -->
-problem - The client is in need of a frontend ui with the ability to search promotion rates, limit  the results to 10 and order by the effective date of the promotion. The client would also like to create and manage user data
+<!-- problem - The client is in need of a frontend ui with the ability to search promotion rates, limit  the results to 10 and order by the effective date of the promotion. The client would also like to create and manage user data
 
 Joe, 41, M a policeman wants to find out what kind of promotions he can look forward to in the police department
 Angela, 31, F is thinking about applying to the fire department and wants to know what the promotion rate looks like 
@@ -55,7 +72,7 @@ solution - create a JavaScript frontend and have a users api micro service that 
 This will allow users to create accounts and look up city records swiftly. 
 
 A monolith would require more work to add services down the line. 
-Seattle has implemented a similar solution 
+Seattle has implemented a similar solution  -->
 
 
 
@@ -65,7 +82,7 @@ Seattle has implemented a similar solution
 
 
 
-Overall, your app must:
+<!-- Overall, your app must:
 - Consist of a back-end and front-end application
 - Have clean, maintainable code
 - Contain at least one `feature` and `unit test` on the front-end or back-end, using the appropriate libraries.
@@ -106,4 +123,4 @@ Overall, your app must:
         - How to run the tests
 - A set of User Stories, hosted on Trello (or an equivalent tool)
     - You must actually USE your user stories, not simply write them at the beginning and leave them behind.
-    - Make sure your Trello board is PUBLIC before turning in.
+    - Make sure your Trello board is PUBLIC before turning in. --> 
