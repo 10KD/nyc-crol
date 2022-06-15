@@ -3,7 +3,7 @@
 <!-- ### New York City Search Engine -->
 ### New York City Employee Promotions Finder
 
-Find the 10 most recent promotions recrods for NYC's fire, police, and sanitation departments.
+Find the 10 most recent promotions records for NYC's fire, police, and sanitation departments.
 Create Read Update and Delete Users. Create Read and Delete Favorites. 
 
 ## Architecture 
